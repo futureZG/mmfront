@@ -43,16 +43,11 @@ public class MainActivity extends BaseActivity<LoginPresenter> implements LoginC
     }
     @OnClick(R.id.loginBtn)
     public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case 0:
 
-                break;
-            case R.id.loginBtn:
                 HashMap<String,String> map = new HashMap<>();
                 map.put("userName",username.getText().toString());
                 map.put("userName",password.getText().toString());
                 mPresenter.login(map);
-                break;
-        }
+
     }
 }

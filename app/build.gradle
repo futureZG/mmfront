@@ -37,6 +37,7 @@ dependencies {
     compile 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     //butterknife
     compile 'com.jakewharton:butterknife:8.8.1'
+    compile 'com.jakewharton:butterknife-compiler:8.8.1'
     //lombok
-    compile 'org.projectlombok:lombok:1.16.20'
+//    compile 'org.projectlombok:lombok:1.16.20'
 }

@@ -10,7 +10,7 @@ import com.mmfront.service.LoginService;
 
 public class LoginApi {
     //    private String baseUrl = "http://gc.ditu.aliyun.com/";//阿里云根据地区名获取经纬度接口
-    private String baseUrl = "http://192.168.0.160:8080/CarMon/service/";
+    private String baseUrl = "http://192.168.1.101:8096/";
 
     private volatile static LoginService loginService;
 
