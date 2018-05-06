@@ -1,42 +1,32 @@
 package com.mmfront.presenter;
 
-import com.mmfront.common.Retrofit.Observer;
-import com.mmfront.common.disposable.DisposableManager;
+import com.mmfront.api.LoginApi;
+import com.mmfront.base.BaseView;
+import com.mmfront.contract.LoginContract;
 import com.mmfront.model.bean.User;
-import com.mmfront.model.domain.LoginDomain;
-import com.mmfront.view.BaseView;
+import com.mmfront.progess.ObserverOnNextListener;
 
-import io.reactivex.disposables.Disposable;
+import java.util.HashMap;
 
 /**
  * Created by My on 2018/5/1.
  */
 
-public class LoginPresenter extends BasePresenter<BaseView>{
-    private LoginDomain loginDomain;
-    public LoginPresenter(){
-        loginDomain = new LoginDomain();
+public class LoginPresenter extends LoginContract.Presenter{
+    private BaseView view;
+
+    public LoginPresenter(LoginContract.View view) {
+        super(view);
     }
-    public void checkLogin(Long phone,String password){
-        loginDomain.checkLogin(phone, password, new Observer<User>() {
+
+
+    @Override
+    public void login(HashMap<String, String> login) {
+        mModel.Subscribe(mContext, LoginApi.getApiService().
+                login(login.get("username"), login.get("password")), new ObserverOnNextListener() {
             @Override
-            public void onNext(User user) {
-
-            }
-
-            @Override
-            public void onError(Throwable e) {
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-
-            @Override
-            protected void onDispsable(Disposable d) {
-                DisposableManager.getInstance().add(d);
+            public void onNext(Object o) {
+                getView().result((User) o);
             }
         });
     }

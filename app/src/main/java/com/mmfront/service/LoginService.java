@@ -1,4 +1,4 @@
-package com.mmfront.model.service;
+package com.mmfront.service;
 
 import com.mmfront.model.bean.User;
 
@@ -13,5 +13,5 @@ import retrofit2.http.Path;
 
 public interface LoginService {
     @GET("login/checkLogin/{phone}/{password}")
-    Observable<User> login(@Path("phone") Long phone,@Path("password") String password);
+    Observable<User> login(@Path("phone") String phone,@Path("password") String password);
 }
