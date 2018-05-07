@@ -1,9 +1,9 @@
 package com.mmfront.common.Retrofit;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.mmfront.common.util.CommonConstants;
 
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 
@@ -35,7 +35,7 @@ public class RetrofitManager {
     private void initRetrofitManager() {
         retrofit = new Retrofit.Builder().baseUrl(CommonConstants.APP_PATH)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 

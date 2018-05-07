@@ -1,7 +1,9 @@
 package com.mmfront.base;
 
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
+
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -25,9 +27,9 @@ public class BaseApi {
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
-               // .addConverterFactory(ScalarsConverterFactory.create())//请求结果转换为基本类型，一般为String
+//                .addConverterFactory(ScalarsConverterFactory.create())//请求结果转换为基本类型，一般为String
                 .addConverterFactory(GsonConverterFactory.create())//请求的结果转为实体类
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())//适配RxJava2.0,
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())//适配RxJava2.0,
                 // RxJava1.x则为RxJavaCallAdapterFactory.create()
                 .build();
         return retrofit;

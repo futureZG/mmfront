@@ -12,6 +12,6 @@ import retrofit2.http.Path;
  */
 
 public interface LoginService {
-    @GET("login/checkLogin/{phone}/{password}")
+    @GET("login/checkLoginGet/{phone}/{password}")
     Observable<User> login(@Path("phone") String phone,@Path("password") String password);
 }
