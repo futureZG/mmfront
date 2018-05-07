@@ -1,4 +1,4 @@
-package com.mmfront.model.bean;
+package com.mmfront.bean;
 
 //import lombok.Getter;
 //import lombok.Setter;

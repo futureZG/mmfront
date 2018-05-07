@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.mmfront.R;
 import com.mmfront.base.BaseActivity;
 import com.mmfront.contract.LoginContract;
-import com.mmfront.model.bean.User;
+import com.mmfront.bean.User;
 import com.mmfront.presenter.LoginPresenter;
 
 import java.util.HashMap;

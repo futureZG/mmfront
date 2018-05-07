@@ -3,13 +3,10 @@ package com.mmfront.presenter;
 import com.mmfront.api.LoginApi;
 import com.mmfront.base.BaseView;
 import com.mmfront.contract.LoginContract;
-import com.mmfront.model.bean.User;
+import com.mmfront.bean.User;
 import com.mmfront.progess.ObserverOnNextListener;
-import com.mmfront.service.LoginService;
 
 import java.util.HashMap;
-
-import io.reactivex.Observable;
 
 /**
  * Created by My on 2018/5/1.

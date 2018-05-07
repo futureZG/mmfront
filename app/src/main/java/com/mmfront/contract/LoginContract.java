@@ -2,7 +2,7 @@ package com.mmfront.contract;
 
 import com.mmfront.base.BasePresenter;
 import com.mmfront.base.BaseView;
-import com.mmfront.model.bean.User;
+import com.mmfront.bean.User;
 
 import java.util.HashMap;
 

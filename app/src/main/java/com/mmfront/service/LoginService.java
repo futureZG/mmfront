@@ -1,6 +1,6 @@
 package com.mmfront.service;
 
-import com.mmfront.model.bean.User;
+import com.mmfront.bean.User;
 
 
 import io.reactivex.Observable;
