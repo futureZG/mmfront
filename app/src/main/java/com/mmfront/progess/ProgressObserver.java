@@ -1,6 +1,7 @@
 package com.mmfront.progess;
 
 import android.content.Context;
+import android.util.Log;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -22,6 +23,8 @@ public class ProgressObserver<T> implements Observer<T> {
 
     @Override
     public void onSubscribe(Disposable d) {
+        this.d = d;
+        Log.d("ProgressObserver", "onSubscribe: ");
 
     }
 

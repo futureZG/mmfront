@@ -13,7 +13,7 @@ import java.util.HashMap;
 public interface LoginContract {
     interface View extends BaseView {
 
-        void result(User data);
+        void result(String data);
 
     }
 

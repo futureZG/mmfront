@@ -8,7 +8,6 @@ import android.widget.Toast;
 import com.mmfront.R;
 import com.mmfront.base.BaseActivity;
 import com.mmfront.contract.LoginContract;
-import com.mmfront.bean.User;
 import com.mmfront.presenter.LoginPresenter;
 
 import java.util.HashMap;
@@ -23,8 +22,8 @@ public class MainActivity extends BaseActivity<LoginPresenter> implements LoginC
     EditText password;
 
     @Override
-    public void result(User data) {
-        Toast.makeText(this,"success",Toast.LENGTH_LONG);
+    public void result(String data) {
+        Toast.makeText(this,data,Toast.LENGTH_LONG);
     }
 
     @Override

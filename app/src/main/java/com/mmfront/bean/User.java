@@ -3,12 +3,14 @@ package com.mmfront.bean;
 //import lombok.Getter;
 //import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * Created by My on 2018/5/1.
  */
 //@Getter
 //@Setter
-public class User {
+public class User implements Serializable{
     private String username;
     private String password;
     private String phone;

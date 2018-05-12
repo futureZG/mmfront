@@ -10,7 +10,7 @@ import com.mmfront.service.LoginService;
 
 public class LoginApi {
     //    private String baseUrl = "http://gc.ditu.aliyun.com/";//阿里云根据地区名获取经纬度接口
-    private String baseUrl = "http://192.168.1.101:8096/";
+    private String baseUrl = "http://localhost:8096/";
 
     private volatile static LoginService loginService;
 
@@ -27,6 +27,7 @@ public class LoginApi {
 
     private LoginApi() {
         BaseApi baseApi = new BaseApi();
-        loginService = baseApi.getSimpleRetrofit(baseUrl).create(LoginService.class);
+//        loginService = baseApi.getSimpleRetrofit(baseUrl).create(LoginService.class);
+        loginService = baseApi.getRetrofit(baseUrl).create(LoginService.class);
     }
 }

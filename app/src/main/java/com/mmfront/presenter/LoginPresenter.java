@@ -26,7 +26,7 @@ public class LoginPresenter extends LoginContract.Presenter{
                 login(login.get("username"), login.get("password")), new ObserverOnNextListener() {
             @Override
             public void onNext(Object o) {
-                getView().result((User) o);
+                getView().result((String) o);
             }
         });
     }

@@ -24,5 +24,6 @@ public class BaseModel<T> {
                 .unsubscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(observer);
+
     }
 }
